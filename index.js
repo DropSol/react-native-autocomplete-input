@@ -121,8 +121,8 @@ const androidStyles = {
     marginBottom: 0,
   },
   list: {
-    ...border,
-    backgroundColor: 'white',
+    // ...border,
+    // backgroundColor: 'white',
     borderTopWidth: 0,
     margin: 10,
     marginTop: 0,
@@ -142,8 +142,8 @@ const iosStyles = {
     paddingLeft: 3,
   },
   list: {
-    ...border,
-    backgroundColor: 'white',
+    // ...border,
+    // backgroundColor: 'white',
     borderTopWidth: 0,
     left: 0,
     position: 'absolute',
