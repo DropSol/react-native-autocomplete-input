@@ -91,12 +91,13 @@ const styles = StyleSheet.create({
 | listContainerStyle | style | These styles will be applied to the container which surrounds the result list. |
 | listStyle | style | These style will be applied to the result list. |
 | onShowResults | function | `onShowResults` will be called when the autocomplete suggestions appear or disappear. |
-| onStartShouldSetResponderCapture | function | `onStartShouldSetResponderCapture` will be passed to the result list view container ([onStartShouldSetResponderCapture](https://facebook.github.io/react-native/docs/gesture-responder-system.html#capture-shouldset-handlers)). |
+| onStartShouldSetResponderCapture | function | `onStartShouldSetResponderCapture` will be passed to the result list view container ([onStartShouldSetResponderCapture](https://reactnative.dev/docs/gesture-responder-system#capture-shouldset-handlers)). |
 | renderTextInput | function | render custom TextInput. All props passed to this function. |
-| flatListProps | object | custom props to [FlatList](https://facebook.github.io/react-native/docs/flatlist.html). |
+| flatListProps | object | custom props to [FlatList](https://reactnative.dev/docs/flatlist). |
+| renderResultList | function | render custom result list. Can be used to replace FlatList. All props passed to this function. |
 
 ## Known issues
-* By default the autocomplete will not behave as expected inside a `<ScrollView />`. Set the scroll view's prop to fix this: `keyboardShouldPersistTaps={true}` for RN <= 0.39, or `keyboardShouldPersistTaps='always'` for RN >= 0.40. ([#5](https://github.com/mrlaessig/react-native-autocomplete-input/issues/5)).
+* By default the autocomplete will not behave as expected inside a `<ScrollView />`. Set the scroll view's prop to fix this: `keyboardShouldPersistTaps={true}` for RN <= 0.39, or `keyboardShouldPersistTaps='always'` for RN >= 0.40. ([#5](https://github.com/mrlaessig/react-native-autocomplete-input/issues/5)). Alternatively, you can use renderResultList to render a custom result list that does not use FlatList. See the tests for an example.
 * If you want to test with Jest add ```jest.mock('react-native-autocomplete-input', () => 'Autocomplete');``` to your test.
 
 ## Contribute
